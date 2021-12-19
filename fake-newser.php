@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Fake newser
  * Version: 1.0.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Plugin URI: 
+ * Description: This is plugin which allow to report fake news
+ * Author: Mateusz Filipek
+ * Author URI: 
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
@@ -13,7 +13,7 @@
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Mateusz Filipek
  * @since 1.0.0
  */
 
@@ -31,16 +31,16 @@ require_once 'includes/lib/class-fake-newser-post-type.php';
 require_once 'includes/lib/class-fake-newser-taxonomy.php';
 
 /**
- * Returns the main instance of Fake_newser to prevent the need to use globals.
+ * Returns the main instance of fake-newser to prevent the need to use globals.
  *
  * @since  1.0.0
- * @return object Fake_newser
+ * @return object fake-newser
  */
 function fake_newser() {
-	$instance = Fake_newser::instance( __FILE__, '1.0.0' );
+	$instance = fake_newser::instance( __FILE__, '1.0.0' );
 
 	if ( is_null( $instance->settings ) ) {
-		$instance->settings = Fake_newser_Settings::instance( $instance );
+		$instance->settings = fake_newser_Settings::instance( $instance );
 	}
 
 	return $instance;
