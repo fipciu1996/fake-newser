@@ -25,6 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once 'includes/class-fake-newser.php';
 require_once 'includes/class-fake-newser-settings.php';
 
+// Load admin classes.
+require_once 'includes/admin/admin-fake-newser.php';
+
 // Load plugin libraries.
 require_once 'includes/lib/class-fake-newser-admin-api.php';
 require_once 'includes/lib/class-fake-newser-post-type.php';

@@ -243,7 +243,7 @@ class Fake_newser {
 	 * @since   1.0.0
 	 */
 	public function load_localisation() {
-		load_plugin_textdomain( 'fake-newser', false, dirname( plugin_basename( $this->file ) ) . '/lang/' );
+		load_plugin_textdomain( 'fakeNewser', false, dirname( plugin_basename( $this->file ) ) . '/lang/' );
 	} // End load_localisation ()
 
 	/**
@@ -254,7 +254,7 @@ class Fake_newser {
 	 * @since   1.0.0
 	 */
 	public function load_plugin_textdomain() {
-		$domain = 'fake-newser';
+		$domain = 'fakeNewser';
 
 		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 

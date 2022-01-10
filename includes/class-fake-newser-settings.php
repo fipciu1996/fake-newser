@@ -128,8 +128,8 @@ class Fake_newser_Settings {
 			array(
 				'location'    => 'options', // Possible settings: options, menu, submenu.
 				'parent_slug' => 'options-general.php',
-				'page_title'  => __( 'Plugin Settings', 'fake-newser' ),
-				'menu_title'  => __( 'Plugin Settings', 'fake-newser' ),
+				'page_title'  => __( 'Plugin Settings', 'fakeNewser' ),
+				'menu_title'  => __( 'Plugin Settings', 'fakeNewser' ),
 				'capability'  => 'manage_options',
 				'menu_slug'   => $this->parent->_token . '_settings',
 				'function'    => array( $this, 'settings_page' ),
@@ -177,7 +177,7 @@ class Fake_newser_Settings {
 	 * @return array        Modified links.
 	 */
 	public function add_settings_link( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'fake-newser' ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'fakeNewser' ) . '</a>';
 		array_push( $links, $settings_link );
 		return $links;
 	}
@@ -190,52 +190,52 @@ class Fake_newser_Settings {
 	private function settings_fields() {
 
 		$settings['standard'] = array(
-			'title'       => __( 'Standard', 'fake-newser' ),
-			'description' => __( 'These are fairly standard form input fields.', 'fake-newser' ),
+			'title'       => __( 'Standard', 'fakeNewser' ),
+			'description' => __( 'These are fairly standard form input fields.', 'fakeNewser' ),
 			'fields'      => array(
 				array(
 					'id'          => 'text_field',
-					'label'       => __( 'Some Text', 'fake-newser' ),
-					'description' => __( 'This is a standard text field.', 'fake-newser' ),
+					'label'       => __( 'Some Text', 'fakeNewser' ),
+					'description' => __( 'This is a standard text field.', 'fakeNewser' ),
 					'type'        => 'text',
 					'default'     => '',
-					'placeholder' => __( 'Placeholder text', 'fake-newser' ),
+					'placeholder' => __( 'Placeholder text', 'fakeNewser' ),
 				),
 				array(
 					'id'          => 'password_field',
-					'label'       => __( 'A Password', 'fake-newser' ),
-					'description' => __( 'This is a standard password field.', 'fake-newser' ),
+					'label'       => __( 'A Password', 'fakeNewser' ),
+					'description' => __( 'This is a standard password field.', 'fakeNewser' ),
 					'type'        => 'password',
 					'default'     => '',
-					'placeholder' => __( 'Placeholder text', 'fake-newser' ),
+					'placeholder' => __( 'Placeholder text', 'fakeNewser' ),
 				),
 				array(
 					'id'          => 'secret_text_field',
-					'label'       => __( 'Some Secret Text', 'fake-newser' ),
-					'description' => __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'fake-newser' ),
+					'label'       => __( 'Some Secret Text', 'fakeNewser' ),
+					'description' => __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'fakeNewser' ),
 					'type'        => 'text_secret',
 					'default'     => '',
-					'placeholder' => __( 'Placeholder text', 'fake-newser' ),
+					'placeholder' => __( 'Placeholder text', 'fakeNewser' ),
 				),
 				array(
 					'id'          => 'text_block',
-					'label'       => __( 'A Text Block', 'fake-newser' ),
-					'description' => __( 'This is a standard text area.', 'fake-newser' ),
+					'label'       => __( 'A Text Block', 'fakeNewser' ),
+					'description' => __( 'This is a standard text area.', 'fakeNewser' ),
 					'type'        => 'textarea',
 					'default'     => '',
-					'placeholder' => __( 'Placeholder text for this textarea', 'fake-newser' ),
+					'placeholder' => __( 'Placeholder text for this textarea', 'fakeNewser' ),
 				),
 				array(
 					'id'          => 'single_checkbox',
-					'label'       => __( 'An Option', 'fake-newser' ),
-					'description' => __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'fake-newser' ),
+					'label'       => __( 'An Option', 'fakeNewser' ),
+					'description' => __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'fakeNewser' ),
 					'type'        => 'checkbox',
 					'default'     => '',
 				),
 				array(
 					'id'          => 'select_box',
-					'label'       => __( 'A Select Box', 'fake-newser' ),
-					'description' => __( 'A standard select box.', 'fake-newser' ),
+					'label'       => __( 'A Select Box', 'fakeNewser' ),
+					'description' => __( 'A standard select box.', 'fakeNewser' ),
 					'type'        => 'select',
 					'options'     => array(
 						'drupal'    => 'Drupal',
@@ -246,8 +246,8 @@ class Fake_newser_Settings {
 				),
 				array(
 					'id'          => 'radio_buttons',
-					'label'       => __( 'Some Options', 'fake-newser' ),
-					'description' => __( 'A standard set of radio buttons.', 'fake-newser' ),
+					'label'       => __( 'Some Options', 'fakeNewser' ),
+					'description' => __( 'A standard set of radio buttons.', 'fakeNewser' ),
 					'type'        => 'radio',
 					'options'     => array(
 						'superman' => 'Superman',
@@ -258,8 +258,8 @@ class Fake_newser_Settings {
 				),
 				array(
 					'id'          => 'multiple_checkboxes',
-					'label'       => __( 'Some Items', 'fake-newser' ),
-					'description' => __( 'You can select multiple items and they will be stored as an array.', 'fake-newser' ),
+					'label'       => __( 'Some Items', 'fakeNewser' ),
+					'description' => __( 'You can select multiple items and they will be stored as an array.', 'fakeNewser' ),
 					'type'        => 'checkbox_multi',
 					'options'     => array(
 						'square'    => 'Square',
@@ -273,27 +273,27 @@ class Fake_newser_Settings {
 		);
 
 		$settings['extra'] = array(
-			'title'       => __( 'Extra', 'fake-newser' ),
-			'description' => __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'fake-newser' ),
+			'title'       => __( 'Extra', 'fakeNewser' ),
+			'description' => __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'fakeNewser' ),
 			'fields'      => array(
 				array(
 					'id'          => 'number_field',
-					'label'       => __( 'A Number', 'fake-newser' ),
-					'description' => __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'fake-newser' ),
+					'label'       => __( 'A Number', 'fakeNewser' ),
+					'description' => __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'fakeNewser' ),
 					'type'        => 'number',
 					'default'     => '',
-					'placeholder' => __( '42', 'fake-newser' ),
+					'placeholder' => __( '42', 'fakeNewser' ),
 				),
 				array(
 					'id'          => 'colour_picker',
-					'label'       => __( 'Pick a colour', 'fake-newser' ),
-					'description' => __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'fake-newser' ),
+					'label'       => __( 'Pick a colour', 'fakeNewser' ),
+					'description' => __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'fakeNewser' ),
 					'type'        => 'color',
 					'default'     => '#21759B',
 				),
 				array(
 					'id'          => 'an_image',
-					'label'       => __( 'An Image', 'fake-newser' ),
+					'label'       => __( 'An Image', 'fakeNewser' ),
 					'description' => __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'fake-newser' ),
 					'type'        => 'image',
 					'default'     => '',
